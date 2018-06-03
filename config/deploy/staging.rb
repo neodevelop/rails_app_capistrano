@@ -2,6 +2,9 @@
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
+set :stage, :staging
+set :puma_bind, %w(tcp://0.0.0.0:3001)
+set :deploy_to, "/var/www/#{fetch(:application)}/staging"
 
 server "54.172.140.168", user: "ec2-user", roles: %w{app db web}
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
