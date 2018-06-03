@@ -3,6 +3,7 @@ lock "~> 3.10.2"
 
 set :application, "rails_app_capistrano"
 set :repo_url, "git@github.com:neodevelop/rails_app_capistrano.git"
+set :rbenv_ruby, '2.3.1'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
